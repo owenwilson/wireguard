@@ -1,0 +1,12 @@
+[root@Ecosia wireguard]# more wg0-client.conf 
+[Interface]
+Address = 10.0.0.3/32
+PrivateKey = MyPrivateKeyHostArchlinux
+DNS = 167.157.20.2,8.8.8.8,8.8.4.4,208.67.222.222,208.67.220.220,84.200.69.80,84.200.70.40,9.9.9.9,149.112.112.112,104.17.117.180
+MTU = 1420
+
+[Peer]
+PublicKey = PublicKeyServerMaster
+AllowedIPs = 10.0.0.0/24
+Endpoint = ipPublicServerMaster:Port
+PersistentKeepalive = 21
