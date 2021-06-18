@@ -1,4 +1,3 @@
-[root@Ecosia wireguard]# more wg0-client.conf 
 [Interface]
 Address = 10.0.0.3/32
 PrivateKey = MyPrivateKeyHostArchlinux
