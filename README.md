@@ -1,10 +1,24 @@
 # WIREGUARD
 
+- Install [wireguard](https://wiki.archlinux.org/title/WireGuard) arch linux
+
+```sh
+sudo pacman -Sy wireguard-tools
+```
+
+- Install [wireguard another distributions](https://www.wireguard.com/install/)
+
+```
+sudo apt install -y wireguard
+```
+
 #### Example wireguard configurations files 
 
-- **ubuntu-18=master**
-- **ubuntu-16=client-1**
-- **archlinux=client-2**
+```
+ubuntu-18=master
+ubuntu-16=client-1
+archlinux=client-2
+```
 
 ### Two peers conected
 
@@ -29,7 +43,8 @@ sysctl -p
 ### Example generate key
 
 ```sh
-sh generateKeyPrivatePublicWireguard.sh
+chmod 755 generateKeyPrivatePublicWireguard
+./ generateKeyPrivatePublicWireguard.sh
 ```
 
 ### Structure files
@@ -37,21 +52,20 @@ sh generateKeyPrivatePublicWireguard.sh
 - **wg0.conf**: wireguard master configuration file
 - **ubuntu-16/wg0.conf** wireguard client-1 configuration file
 
-ubuntu-16
-|
-|__wg0.conf
+```sh
+ubuntu-16/wg0.conf
+```
 
 
 - **archlinux/wg0-client**  wireguard client-2 configuration file
 
-archlinux
-|
-|__wg0-client
+```sh
+archlinux/wg0-client
+```
 
-### Contributions
+## Lisence
 
-created by [owenwilson](https://github.com/owenwilson/)
+- This project is licensed under the **licencia MIT** 
 
-### Donations
+![License: MIT](https://img.shields.io/badge/License-MIT-yellowhttps)
 
-- [voluntary donations! devfrustrado](https://www.paypal.com/paypalme/devfrustrado)
